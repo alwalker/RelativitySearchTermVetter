@@ -1,0 +1,26 @@
+﻿<Window x:Class="RelativitySearchTermVetter.Presentation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Relativity Search Term Vetter" Height="768" Width="1024">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="148*"/>
+            <RowDefinition Height="589*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="429*"/>
+            <ColumnDefinition Width="79*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="dgTerms" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="2"/>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1">
+            <Button Name="btnNew" Content="New" Margin="5,5,5,0" Click="btnNew_Click"/>
+            <Button Name="btnGenerate" Content="Generate CSV" Margin="5,5,5,0"/>
+            <Button Name="btnEditNoiseWords" Content="Edit Noise Words" Margin="5,5,5,0"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="1" VerticalAlignment="Bottom">
+            <CheckBox Name="chkShowNoiseWords" Content="Show Noise Words" Margin="5,5,5,0"/>
+            <CheckBox Name="chkShowUnSearchable" Content="Show Reserved Words" Margin="5,5,5,10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

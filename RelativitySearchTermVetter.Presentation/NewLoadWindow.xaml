@@ -1,0 +1,19 @@
+﻿<Window x:Class="RelativitySearchTermVetter.Presentation.NewLoadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Load Terms" Height="500" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="555*"/>
+            <ColumnDefinition Width="137*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="txtTerms" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" TextWrapping="Wrap" AcceptsReturn="True"/>
+        <StackPanel Grid.Column="1">
+            <Button Name="btnLoadProject" Content="Load Project" Margin="5,5,5,0"/>
+            <Button Name="btnLoadFromFile" Content="Load From File" Margin="5,5,5,0"/>
+            <Button Name="btnOk" Content="Ok" Margin="5,5,5,0"/>
+            <Button Name="btnCancel" Content="Cancel" Margin="5,5,5,0"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
