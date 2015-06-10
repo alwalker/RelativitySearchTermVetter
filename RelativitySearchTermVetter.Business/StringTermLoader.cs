@@ -15,11 +15,13 @@ namespace RelativitySearchTermVetter.Business
                 throw new ArgumentException("source can not be null or empty!");
             }
 
+            var lineNumber = 1;
             foreach (var rawTerm in source.Split('\n'))
             {
-                if (!String.IsNullOrEmpty(rawTerm))
+                if (!String.IsNullOrEmpty(rawTerm.Trim()))
                 {
-                    terms.Add(new Term(rawTerm.Trim()));
+                    terms.Add(new Term(lineNumber, rawTerm.Trim()));
+                    lineNumber++;
                 }
             }
         }

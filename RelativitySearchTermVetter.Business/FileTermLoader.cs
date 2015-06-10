@@ -25,11 +25,13 @@ namespace RelativitySearchTermVetter.Business
             using (var sr = new StreamReader(bs))
             {
                 String line;
+                var lineNumber = 1;
                 while ((line = sr.ReadLine()) != null)
                 {
                     if (!String.IsNullOrEmpty(line))
                     {
-                        terms.Add(new Term(line.Trim()));
+                        terms.Add(new Term(lineNumber, line.Trim()));
+                        lineNumber++;
                     }
                 }
             }

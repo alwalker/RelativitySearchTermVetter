@@ -13,8 +13,9 @@ namespace RelativitySearchTermVetter.Business
         private string _correctedText;
         private string _comment;
 
-        public Term(string raw)
+        public Term(int lineNumber, String raw)
         {
+            _lineNumber = lineNumber;
             _rawText = raw;
         }
     }
