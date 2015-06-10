@@ -37,6 +37,7 @@ namespace RelativitySearchTermVetter.Presentation
             var terms = new List<Term>();
             var loadWindow = new NewLoadWindow(terms);
             loadWindow.ShowDialog();
+            int x = 0;
 
         }
     }

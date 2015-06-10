@@ -40,21 +40,13 @@ namespace RelativitySearchTermVetter.Presentation
                 return;
             }
 
-            _terms = LoadTerms(txtTerms.Text, _terms);
+            LoadTerms(new StringTermLoader(), txtTerms.Text);
             Close();
         }
 
-        private IList<Term> LoadTerms(String source, IList<Term> terms)
+        private void LoadTerms(TermLoader loader, String source)
         {
-            foreach (var rawTerm in source.Split('\n'))
-            {
-                if (!String.IsNullOrEmpty(rawTerm))
-                {
-                    terms.Add(new Term(rawTerm));
-                }
-            }
-
-            return terms;
+            loader.Load(_terms, source);
         }
 
         private void btnLoadProject_Click(object sender, RoutedEventArgs e)
