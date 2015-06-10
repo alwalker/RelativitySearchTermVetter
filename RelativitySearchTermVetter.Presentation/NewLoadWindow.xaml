@@ -9,10 +9,10 @@
         </Grid.ColumnDefinitions>
         <TextBox Name="txtTerms" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" TextWrapping="Wrap" AcceptsReturn="True"/>
         <StackPanel Grid.Column="1">
-            <Button Name="btnLoadProject" Content="Load Project" Margin="5,5,5,0"/>
-            <Button Name="btnLoadFromFile" Content="Load From File" Margin="5,5,5,0"/>
-            <Button Name="btnOk" Content="Ok" Margin="5,5,5,0"/>
-            <Button Name="btnCancel" Content="Cancel" Margin="5,5,5,0"/>
+            <Button Name="btnLoadProject" Content="Load Project" Margin="5,5,5,0" Click="btnLoadProject_Click"/>
+            <Button Name="btnLoadFromFile" Content="Load From File" Margin="5,5,5,0" Click="btnLoadFromFile_Click"/>
+            <Button Name="btnOk" Content="Ok" Margin="5,5,5,0" Click="btnOk_Click"/>
+            <Button Name="btnCancel" Content="Cancel" Margin="5,5,5,0" Click="btnCancel_Click"/>
         </StackPanel>
 
     </Grid>

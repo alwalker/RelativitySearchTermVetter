@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace RelativitySearchTermVetter.Business
 {
-    class Term
+    public class Term
     {
+        private int _lineNumber;
+        private string _rawText;
+        private string _correctedText;
+        private string _comment;
+
+        public Term(string raw)
+        {
+            _rawText = raw;
+        }
     }
 }

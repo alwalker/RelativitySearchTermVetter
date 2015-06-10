@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9B9D36
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativitySearchTermVetter.Presentation", "RelativitySearchTermVetter.Presentation\RelativitySearchTermVetter.Presentation.csproj", "{86310189-84B1-4550-844F-837DC2D3590E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativitySearchTermVetter.Business", "RelativitySearchTermVetter.Business\RelativitySearchTermVetter.Business.csproj", "{EF553665-2D8E-4579-83ED-EEE1DB8A581F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativitySearchTermVetter.Data", "RelativitySearchTermVetter.Data\RelativitySearchTermVetter.Data.csproj", "{7B42D079-64E6-44AE-B73B-AF3384CA6FD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +26,14 @@ Global
 		{86310189-84B1-4550-844F-837DC2D3590E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86310189-84B1-4550-844F-837DC2D3590E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86310189-84B1-4550-844F-837DC2D3590E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF553665-2D8E-4579-83ED-EEE1DB8A581F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF553665-2D8E-4579-83ED-EEE1DB8A581F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF553665-2D8E-4579-83ED-EEE1DB8A581F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF553665-2D8E-4579-83ED-EEE1DB8A581F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B42D079-64E6-44AE-B73B-AF3384CA6FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B42D079-64E6-44AE-B73B-AF3384CA6FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B42D079-64E6-44AE-B73B-AF3384CA6FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B42D079-64E6-44AE-B73B-AF3384CA6FD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RelativitySearchTermVetter.Business;
 
 namespace RelativitySearchTermVetter.Presentation
 {
@@ -27,8 +28,16 @@ namespace RelativitySearchTermVetter.Presentation
 
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
-            var loadWindow = new NewLoadWindow();
+            //var loadWindow = new NewLoadWindow();
+            //loadWindow.ShowDialog();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var terms = new List<Term>();
+            var loadWindow = new NewLoadWindow(terms);
             loadWindow.ShowDialog();
+
         }
     }
 }
