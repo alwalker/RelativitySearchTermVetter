@@ -12,7 +12,7 @@ namespace RelativitySearchTermVetter.Business
         {
             if (terms == null)
             {
-                throw new ArgumentException("terms can not be null!");
+                throw new ArgumentException("source can not be null or empty!");
             }
 
             foreach (var rawTerm in source.Split('\n'))

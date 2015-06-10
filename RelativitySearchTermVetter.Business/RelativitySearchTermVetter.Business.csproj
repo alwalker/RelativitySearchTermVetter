@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileTermLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringTermLoader.cs" />
     <Compile Include="Term.cs" />

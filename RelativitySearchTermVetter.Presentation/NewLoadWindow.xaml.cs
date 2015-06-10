@@ -33,7 +33,7 @@ namespace RelativitySearchTermVetter.Presentation
             if (String.IsNullOrEmpty(txtTerms.Text))
             {
                 MessageBox.Show(
-                    "You haven't entered any search terms! Please either enter some into the text box, load them from a file, or open an existin project.",
+                    "You haven't entered any search terms! Please either enter some into the text box, load them from a file, or open an existing project.",
                     "No Terms!",
                     MessageBoxButton.OK,
                     MessageBoxImage.Stop);
@@ -56,7 +56,26 @@ namespace RelativitySearchTermVetter.Presentation
 
         private void btnLoadFromFile_Click(object sender, RoutedEventArgs e)
         {
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog();
+            var result = openFileDialog.ShowDialog();
 
+            if (result == true)
+            {
+                LoadTerms(new FileTermLoader(), openFileDialog.FileName);
+
+                if (_terms.Count <= 0)
+                {
+                    MessageBox.Show(
+                    "No terms found in file! Please choose a valid file, enter some manually, or choose an existing project.",
+                    "No Terms!",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Stop);
+                }
+                else
+                {
+                    Close();
+                }
+            }
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
