@@ -11,7 +11,10 @@ namespace RelativitySearchTermVetter.Business
         private int _lineNumber;
         private string _rawText;
         private string _correctedText;
-        private string _comment;
+
+        public String LineNumber { get { return _lineNumber.ToString(); } }
+        public String RawText { get { return _rawText; } }
+        public String Comment { get; set;}
 
         public Term(int lineNumber, String raw)
         {

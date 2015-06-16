@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using RelativitySearchTermVetter.Business;
+using System.Collections.ObjectModel;
 
 namespace RelativitySearchTermVetter.Presentation
 {
@@ -37,8 +38,9 @@ namespace RelativitySearchTermVetter.Presentation
             var terms = new List<Term>();
             var loadWindow = new NewLoadWindow(terms);
             loadWindow.ShowDialog();
-            int x = 0;
 
+            var itemCollectionViewSource = (CollectionViewSource)(FindResource("ItemCollectionViewSource"));
+            itemCollectionViewSource.Source = new ObservableCollection<Term>(terms);
         }
     }
 }

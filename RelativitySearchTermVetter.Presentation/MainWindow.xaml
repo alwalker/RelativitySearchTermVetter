@@ -3,6 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Loaded="Window_Loaded"
         Title="Relativity Search Term Vetter" Height="768" Width="1024">
+    <Window.Resources>
+        <CollectionViewSource x:Key="ItemCollectionViewSource"  CollectionViewType="ListCollectionView"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="148*"/>
@@ -12,7 +15,15 @@
             <ColumnDefinition Width="429*"/>
             <ColumnDefinition Width="79*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Name="dgTerms" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="2"/>
+        <DataGrid Name="dgTerms" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="2" DataContext="{StaticResource ItemCollectionViewSource}" ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="#" Binding="{Binding Path=LineNumber, Mode=OneWay}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Raw" Binding="{Binding Path=RawText, Mode=OneWay}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="RuleViolation" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Fix"/>
+                <DataGridTextColumn Header="Commet" Binding="{Binding Path=Comment, Mode=TwoWay}"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="1">
             <Button Name="btnNew" Content="New" Margin="5,5,5,0" Click="btnNew_Click"/>
             <Button Name="btnGenerate" Content="Generate CSV" Margin="5,5,5,0"/>
