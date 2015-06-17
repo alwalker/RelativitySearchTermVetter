@@ -26,6 +26,7 @@ namespace RelativitySearchTermVetter.Presentation
         {
             _terms = terms;
             InitializeComponent();
+            txtTerms.Focus();
         }
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
