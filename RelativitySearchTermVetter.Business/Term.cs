@@ -11,12 +11,12 @@ namespace RelativitySearchTermVetter.Business
     {
         private int _lineNumber;
         private String _rawText;
-        private String _correctedText;
         private List<Rule> _violatedRules;
 
         public String LineNumber { get { return _lineNumber.ToString(); } }
         public String RawText { get { return _rawText; } }
         public String Comment { get; set; }
+        public String CorrectedText { get; set; }
         public List<Rule> ViolatedRules { get { return _violatedRules; } }
         public String ViolatedRulesDescriptions { get { return String.Join(", ", _violatedRules.Select(r => r.ViolationDescription)); } }
 
