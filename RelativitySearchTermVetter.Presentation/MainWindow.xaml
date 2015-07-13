@@ -19,7 +19,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="#" Binding="{Binding Path=LineNumber, Mode=OneWay}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Raw" Binding="{Binding Path=RawText, Mode=OneWay}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="RuleViolation" IsReadOnly="True"/>
+                <DataGridTextColumn Header="RuleViolation" Binding="{Binding Path=ViolatedRulesDescriptions, Mode=OneWay}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Fix"/>
                 <DataGridTextColumn Header="Commet" Binding="{Binding Path=Comment, Mode=TwoWay}"/>
             </DataGrid.Columns>

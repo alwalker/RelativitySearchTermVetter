@@ -1,4 +1,5 @@
 ﻿using RelativitySearchTermVetter.Business;
+using RelativitySearchTermVetter.Business.Rules;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +49,18 @@ namespace RelativitySearchTermVetter.Presentation
         private void LoadTerms(TermLoader loader, String source)
         {
             loader.Load(_terms, source);
+            var rules = Rule.GetAllRules();
+
+            foreach (var rule in rules)
+            {
+                foreach (var term in _terms)
+                {
+                    if (!rule.Validate(term))
+                    {
+                        term.ViolatedRules.Add(rule);
+                    }
+                }
+            }
         }
 
         private void btnLoadProject_Click(object sender, RoutedEventArgs e)

@@ -12,13 +12,13 @@ namespace RelativitySearchTermVetter.Business.Rules
 
         public abstract bool Validate(Term term);
 
-        public static List<Rule> GetAllRules()
+        public static IList<Rule> GetAllRules()
         {
-            var rules = new List<Rule>();
-
-
-
-
+            var rules = new List<Rule> 
+            {
+                new WrongNumberParens(),
+                new WrongNumberQuotes()
+            };
 
             return rules;
         }

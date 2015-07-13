@@ -18,12 +18,13 @@ namespace RelativitySearchTermVetter.Business
         public String RawText { get { return _rawText; } }
         public String Comment { get; set; }
         public List<Rule> ViolatedRules { get { return _violatedRules; } }
-        public IEnumerable<String> ViolatedRulesDescriptions { get { return _violatedRules.Select(r => r.ViolationDescription); } }
+        public String ViolatedRulesDescriptions { get { return String.Join(", ", _violatedRules.Select(r => r.ViolationDescription)); } }
 
         public Term(int lineNumber, String raw)
         {
             _lineNumber = lineNumber;
             _rawText = raw;
+            _violatedRules = new List<Rule>();
         }
     }
 }
