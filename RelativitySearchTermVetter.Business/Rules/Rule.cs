@@ -18,7 +18,8 @@ namespace RelativitySearchTermVetter.Business.Rules
             {
                 new WrongNumberParens(),
                 new WrongNumberQuotes(),
-                new StarInQuotes()
+                new StarInQuotes(),
+                new MissingWith()
             };
 
             return rules;
