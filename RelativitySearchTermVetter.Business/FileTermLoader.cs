@@ -9,7 +9,7 @@ namespace RelativitySearchTermVetter.Business
 {
     public class FileTermLoader : TermLoader
     {
-        public override void Load(IList<Term> terms, string source)
+        public override void Load(IList<Term> terms, String source)
         {
             if (terms == null)
             {
