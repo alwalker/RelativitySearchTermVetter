@@ -9,5 +9,10 @@ namespace RelativitySearchTermVetter.Business
     public abstract class TermLoader
     {
         public abstract void Load(IList<Term> terms, String source);
+
+        protected void MarkDupes(IList<Term> terms)
+        {
+
+        }
     }
 }
