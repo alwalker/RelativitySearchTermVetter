@@ -9,7 +9,10 @@ namespace RelativitySearchTermVetter.Business.Rules
 {
     public class StarInQuotes : Rule
     {
-        public override String ViolationDescription { get { return "Wildcard character inside quotations"; } }
+        public override String GetViolationDescription(params String[] args)
+        {
+            return "Wildcard character inside quotations";
+        }
 
         public override bool Validate(Term term)
         {

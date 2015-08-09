@@ -8,7 +8,7 @@ namespace RelativitySearchTermVetter.Business.Rules
 {
     public abstract class Rule
     {
-        public abstract String ViolationDescription { get; }
+        public abstract String GetViolationDescription(params String[] args);
 
         public abstract bool Validate(Term term);
 

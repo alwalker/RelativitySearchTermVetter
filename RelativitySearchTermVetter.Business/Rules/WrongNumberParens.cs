@@ -8,7 +8,10 @@ namespace RelativitySearchTermVetter.Business.Rules
 {
     public class WrongNumberParens : Rule
     {
-        public override String ViolationDescription { get { return "Mismatched Parenthesis"; } }
+        public override String GetViolationDescription(params String[] args)
+        {
+            return "Mismatched Parenthesis";
+        }
 
         public override bool Validate(Term term)
         {

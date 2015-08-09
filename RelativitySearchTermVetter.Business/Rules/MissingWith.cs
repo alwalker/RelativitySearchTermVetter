@@ -9,7 +9,10 @@ namespace RelativitySearchTermVetter.Business.Rules
 {
     public class MissingWith : Rule
     {
-        public override String ViolationDescription { get { return "Missing 'w' on proximity search"; } }
+        public override String GetViolationDescription(params String[] args)
+        {
+            return "Missing 'w' on proximity search"; 
+        }
 
         public override bool Validate(Term term)
         {

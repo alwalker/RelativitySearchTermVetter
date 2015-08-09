@@ -8,7 +8,10 @@ namespace RelativitySearchTermVetter.Business.Rules
 {
     public class WrongNumberQuotes : Rule
     {
-        public override String ViolationDescription { get { return "Uneven Number of Quotes"; } }
+        public override String GetViolationDescription(params String[] args)
+        {
+            return "Uneven Number of Quotes";
+        }
 
         public override bool Validate(Term term)
         {
