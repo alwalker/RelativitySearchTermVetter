@@ -18,7 +18,7 @@ namespace RelativitySearchTermVetter.Business
         public String Comment { get; set; }
         public String CorrectedText { get; set; }
         public List<Rule> ViolatedRules { get { return _violatedRules; } }
-        public String ViolatedRulesDescriptions { get { return String.Join(", ", _violatedRules.Select(r => r.ViolationDescription)); } }
+        public String ViolatedRulesDescriptions { get { return String.Join(", ", _violatedRules.Select(r => r.GetViolationDescription())); } }
 
         public Term(int lineNumber, String raw)
         {

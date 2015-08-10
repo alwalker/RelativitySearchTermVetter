@@ -12,7 +12,10 @@ namespace RelativitySearchTermVetter.Business
 
         protected void MarkDupes(IList<Term> terms)
         {
+            foreach (var term in terms)
+            {
 
+            }
         }
     }
 }
